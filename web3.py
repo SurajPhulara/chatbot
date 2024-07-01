@@ -88,7 +88,6 @@ def call_openai_api(chat_history, current_json):
             Please provide any inferences you can make from the conversation in the following format:
             {{
                 "inferences": [
-                    {{"field_name": "optimizeType", "answer": "manual"}},
                     {{"field_name": "firstDestination", "answer": "Goa"}},
                     {{"field_name": "trip_theme", "answer": "beach"}},
                     {{"field_name": "destination", "answer": ["Goa", "Kerala"]}},
@@ -104,7 +103,17 @@ def call_openai_api(chat_history, current_json):
             this is jsut an example for you to learn.
 
             only give inferences about the fields that are actually answered by the user and dont make up any data by yourself
-            and do not ask the questions that have already been answered
+            and do not ask the questions that have already been answered. 
+
+            only give inferences to the questions that the user have answered and check the history before answering
+
+            remember to carefully analyze the user query and chat history and then give your next question as a human would do.
+            remember first think then answer
+
+            INSTRUCTIONS:
+                - communicate as a human be kind and polite and speak directly (be interactive dont be exact straight forward try to get that data out of him by politely asking and the same thing in another way to increase user retention)  (most important)
+                - remember never to ask direct question. be polite you know how to handle customers right. take the context of the chat history before answering
+                - along with each question tell the user what type of response you are excepting
         """,
         input_variables=["chat_history", "current_json", "latest_user_input"],
     )
@@ -216,7 +225,7 @@ def main():
         render_json_ui()
 
     # Update the displayed JSON data
-    st.write(json.dumps(st.session_state['json_data'], indent=4))
+    # st.write(json.dumps(st.session_state['json_data'], indent=4))
 
 def clear_session_state():
     """Clear all session state variables."""
