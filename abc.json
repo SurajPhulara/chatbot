@@ -1,0 +1,369 @@
+{
+    "optimizeType": {
+        "description": "this determines how the list of cities to be sequenced, either manually by user or an auto-sequencing api",
+        "value": "<enumerated_datatype, default:manual>",
+        "value_option": [
+            "manual",
+            "auto"
+        ],
+        "required": true,
+        "completion_tag": "<boolean, default:false>"
+    },
+    "firstDestination": {
+        "description": "this determines the first city to be visited before auto-sequencing the cities. user has to choose this",
+        "value": "<string, default:'' >",
+        "required": false
+    },
+    "trip_theme": {
+        "description": "This is the theme of the trip per place if user has specified a theme for each place .",
+        "value": {
+            "romantic": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "family-vacation": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "eco-tourism": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "party": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "roadtrip": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "remote-work": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "business-work": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "health and wellness": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "spiritual": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "lbgtq+": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "adventure": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            },
+            "general-tourism-no-theme": {
+                "user_selected": {
+                    "value": "<boolean default:false>",
+                    "required": false
+                },
+                "places": {
+                    "value": "<[string] default:[]>",
+                    "required": false
+                },
+                "user_keywords": {
+                    "description": "this field captures the trip theme related keywords from user input for this particular place",
+                    "value": "<string default:''>",
+                    "required": false
+                }
+            }
+        },
+        "required": true
+    },
+    "destination": {
+        "description": "This is the list of places to visit. it can be a city, island, state, province, region, country, continent",
+        "value_type": "list",
+        "required": true,
+        "value": [
+            {
+                "description": "this value can be name of a city, island, state, province, region, country, continent",
+                "value": "<string> default:'' ",
+                "required": true 
+            },
+            {
+                "description": "this value can be name of a city, island, state, province, region, country, continent",
+                "value": "<string> default:'' ",
+                "required": true 
+            }
+        ],
+        "default": []
+    },
+    "traveller_type": {
+        "description": "This is the type of traveller.",
+        "value": "<enumerated_data default: solo>",
+        "value_option": [
+            "solo",
+            "couple",
+            "family-no kids",
+            "family-with kids",
+            "friends"
+        ],
+        "required": true,
+        "adults": "<integer default: 1>",
+        "children": "<integer default: 0>"
+    },
+    "Origin_city": {
+        "description": "this value is name of city of origin",
+        "value": "<string default:'' ",
+        "required": true, 
+        "country": ""
+    },
+    "budget": {
+        "description": "this value describes the budget preference of the traveller",
+        "value": "<enumerated_data default:comfortable spending>",
+        "value_option": [
+            "on a tight budget,comfortable spending,happy to spend for a luxurious vacation"
+        ],
+        "required": true
+    },
+    "food": {
+        "description": "This list is about the dietary preference of the traveller.",
+        "value_type": "<enumerated_data default:any>",
+        "value_option": [
+            "any",
+            "Middle-eastern",
+            "indian",
+            "asian",
+            "european",
+            "mexican",
+            "vegetarian",
+            "south american",
+            "vegan",
+            "seafood",
+            "fast food",
+            "cafe",
+            "dessert",
+            "healthy",
+            "bar/pub",
+            "barbeque",
+            "pizza"
+        ],
+        "required": true
+    },
+    "trip_direction": {
+        "value": "<enumerated_data default:return>",
+        "value_option": [
+            "return",
+            "oneway"
+        ],
+        "required": true
+    },
+    "time_schedule": {
+        "onward_trip": {
+            "time": {
+                "hour": "<integer default:0>",
+                "minute": "<integer default:0>",
+                "format": {
+                    "value": "<enumerated_data default: AM/PM>",
+                    "value_option": [
+                        "AM/PM",
+                        "24Hour"
+                    ]
+                },
+                "user_specified": "<boolean default: false>"
+            },
+            "date": {
+                "day_of_month": {
+                    "value": "<enumerated_data default: {tomorrow}>",
+                    "value_option": [
+                        1,31
+                    ]
+                },
+                "month": {
+                    "value": "<enumerated_data default: {current_month}>",
+                    "value_option": [
+                        1,
+                        12
+                    ]
+                },
+                "year": {
+                    "value": "<enumerated_data default: {current_year}>",
+                    "value_option": [
+                        "{current_year}",
+                        "{next_year}"
+                    ]
+                },
+                "user_specified": "<boolean default: false>"
+            }
+        },
+        "return_trip": {
+            "time": {
+                "hour": "<integer default:0>",
+                "minute": "<integer default:0>",
+                "format": {
+                    "value": "<enumerated_data default: AM/PM>",
+                    "value_option": [
+                        "AM/PM",
+                        "24Hour"
+                    ]
+                },
+                "user_specified": "<boolean default: false>"
+            },
+            "date": {
+                "day_of_month": {
+                    "value": "<enumerated_data default: {tomorrow}>",
+                    "value_option": [
+                        1,31
+                    ]
+                },
+                "month": {
+                    "value": "<enumerated_data default: {current_month}>",
+                    "value_option": [
+                        1,
+                        12
+                    ]
+                },
+                "year": {
+                    "value": "<enumerated_data default: {current_year}>",
+                    "value_option": [
+                        "{current_year}",
+                        "{next_year}"
+                    ]
+                },
+                "user_specified": "<boolean default: false>"
+            }
+        },
+        "duration": {
+            "value": "<integer default:0>",
+            "unit": {
+                "value": "<enumerated_data default: days>",
+                "value_option": [
+                    "week",
+                    "month",
+                    "days"
+                ]
+            },
+            "user_specified": "<boolean default: false>"
+        }
+    }
+}

@@ -1,0 +1,73 @@
+tripplan_json = {
+  "optimizeType": {},
+  "firstDestination": {},
+  "trip_theme": {},
+  "destination": {},
+  "traveller_type": {},
+  "Origin_city": {},
+  "budget": {},
+  "food": {},
+  "trip_direction": {},
+}
+// "time_schedule":{
+//   "onward_trip":{
+//     "time":{
+//       "hour": "<integer default:0>" ,
+//       "minute": "<integer default:0>" ,
+//       "format":{
+//         "value": "<enumerated_data default: AM/PM>",
+//         "value_option":  ["AM/PM" , "24Hour"],
+//       },
+//       "user_specified": "<boolean default: false>" 
+//     },
+//     "date":{
+//       "day_of_month":{
+//         "value": "<enumerated_data default: {tomorrow}>",
+//         "value_option":  [1,..31],
+//       },
+//       "month":{
+//         "value": "<enumerated_data default: {current_month}>",
+//         "value_option":  [1,.., 12],
+//       },
+//       "year": {
+//         "value": "<enumerated_data default: {current_year}>",
+//         "value_option":  ["{current_year}" , "{next_year}"],
+//       },
+//       "user_specified": "<boolean default: false>" 
+//     }
+//   },
+//   "return_trip":{
+//     "time":{
+//       "hour": "<integer default:0>" ,
+//       "minute": "<integer default:0>" ,
+//       "format":{
+//         "value": "<enumerated_data default: AM/PM>",
+//         "value_option":  ["AM/PM" , "24Hour"],
+//       },
+//       "user_specified": "<boolean default: false>" 
+//     },
+//     "date":{
+//       "day_of_month":{
+//         "value": "<enumerated_data default: {tomorrow}>",
+//         "value_option":  [1,..31],
+//       },
+//       "month":{
+//         "value": "<enumerated_data default: {current_month}>",
+//         "value_option":  [1,.., 12],
+//       },
+//       "year": {
+//         "value": "<enumerated_data default: {current_year}>",
+//         "value_option":  ["{current_year}" , "{next_year}"],
+//       },
+//       "user_specified": "<boolean default: false>" 
+//     }
+//   },
+//   "duration": {
+//     "value":"<integer default:0>" ,
+//     "unit": {
+//       "value": "<enumerated_data default: days>",
+//       "value_option":  ["week" , "month", "days"],
+//     },
+//     "user_specified": "<boolean default: false>"            
+//   }
+// }
